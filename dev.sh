@@ -1,2 +1,2 @@
 
-brew install openssl
+brew install zsh
