@@ -2,4 +2,4 @@
 
 cd $HOME
 
-check-and-brew-install watch
+brew install python
