@@ -1,17 +1,5 @@
 #!/usr/bin/ bash
 
-xcode-select --install
-xcode-select -p
-
-#rvm ruby rails
-curl -L https://get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
-rvm install 2.0.0
-rvm 2.0.0 --default
-gem source -r https://rubygems.org/
-gem source -a https://ruby.taobao.org
-gem install rails
-
 #brew cask
 brew tap phinze/homebrew-cask
 brew install brew-cask
@@ -25,9 +13,11 @@ if [ `brew list | grep git` = "git" ]; then echo "git already install"; else bre
 if [ `brew list | grep curl` = "curl" ]; then echo "curl already install"; else brew cask install curl; fi
 if [ `brew list | grep jslint` = "jslint" ]; then echo "jslint already install"; else brew cask install jslint; fi
 
-#global gem
-npm remove karma &&npm install karma 
+#karma
 npm uninstall npm && npm install npm
+npm remove karma &&npm install karma 
+
+#global gem
 gem unstall rea-ec2 && gem install rea-ec2
 gem unstall pry && gem install pry
 gem unstall byebug && gem install byebug
